@@ -29,5 +29,9 @@ class Desarrollador (Empleado):
 Laura = Desarrollador("Laura", 180000, 50000)
 print(f"salario de {Laura.nombre}:{Laura.calcular_salario()}")
 
+Luis = Vendedor("Luis", 1200000, 10000)
+print(f"salario de {Luis.nombre}:{Luis.calcular_salario()}")
+
+
 
     
