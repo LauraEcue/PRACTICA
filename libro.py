@@ -16,6 +16,7 @@ class libro:
 
     def devolver(self):
         self.p=False
+        return f"el libro {self.titulo} ha sido devuelto"
 
     def esta_prestado(self):
         return not self.p
