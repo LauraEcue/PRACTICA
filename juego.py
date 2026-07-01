@@ -40,6 +40,15 @@ class Guerro(Personaje):
     def Atacar(self):
         daño = self.nivel + self.fuerza
         return daño
+    print(f"")
+
+    
+
+class Mago(Personaje):
+    def __init__(self, nombre, vida, nivel, fuerza, maná):
+        super().__init__(self, nombre, nivel, fuerza)
+        self.maná = maná
+
 
 
         
