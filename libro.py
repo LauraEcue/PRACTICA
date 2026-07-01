@@ -3,11 +3,11 @@ class libro:
         self.titulo = titulo
         self.categoria = categoria
         self.autor = autor
-        self.p = False
+        self.prestado = False
 
     def prestar (self):
-        if (not self.p):
-            self.p = True
+        if (not self.prestado):
+            self.prestado = True
 
             return f"El libro {self.titulo} ha sido prestado"
 
@@ -15,11 +15,11 @@ class libro:
             return f"El libro {self.titulo} no esta prestado"
 
     def devolver(self):
-        self.p=False
+        self.prestado=False
         return f"el libro {self.titulo} ha sido devuelto"
 
     def esta_prestado(self):
-        return not self.p
+        return not self.prestado
 
 
 class Biblioteca:
@@ -27,9 +27,9 @@ class Biblioteca:
         self.nombre = nombre
         self.lista_libros = []
 
-    def agregar_libro(self,libro):
-        self.lista_libros.append(libro)
-        print (f"{libro.titulo}, Agregado a la biblioteca")
+    def agregar_libro(self,nuevo_libro):
+        self.lista_libros.append(nuevo_libro)
+        print (f"{nuevo_libro.titulo}, Agregado a la biblioteca")
 
     def mostrar_libro(self):
         print(f"biblioteca: {self.nombre}")
@@ -50,7 +50,7 @@ L4 = libro("El padrino", "Misterio", "Mario mendoza")
 L5 = libro("La odisea", "Epica", "Homero")
 
 
-B1 = Biblioteca("Biblioteca central")
+B1 = Biblioteca("Biblioteca unica central")
 
 #Agregar libros
 B1.agregar_libro(L1)
@@ -64,7 +64,7 @@ print(L2.prestar())
 print(L1.devolver())
 print(L3.esta_prestado())
 
-
+print ("*****************")
 #mostrar lista de libro
 B1.mostrar_libro()
 
